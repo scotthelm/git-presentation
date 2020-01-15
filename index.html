@@ -93,6 +93,62 @@ Changes to be committed:
             </code></pre>
             This shows that my change has been <em>staged for commit</em>
           </section>
+          <section>
+            <pre><code data-trim data-noescape>
+$ git commit
+            </code></pre>
+            is how you add code to the git repository. The commit contains the changes you <em>staged</em> earlier
+          </section>
+          <section>
+            By default git commit brings up whatever program is configured to be your EDITOR. This allows you to craft a good commit message...
+            <div style="text-align:center"><img src="images/git_commit_message.png" alt="git_commit_message" class="fragment fade-in"/></div>
+          </section>
+          <section>
+            Use
+            <pre><code data-trim data-noescape>
+$ git log
+commit d365c74ed7c0a51a9e57284c0b68da4cbd6e753b (HEAD -> feature/primer)
+Author: Scott Helm <helm.scott@gmail.com>
+Date:   Wed Jan 15 16:05:11 2020 -0500
+
+    adds primer sections init through add
+
+    a section with a newline separating your commit message above from your
+    comments below, allows you to add more context and reasoning behind
+    changes in the commit message itself. By default, it uses your current
+    EDITOR setting (most likely vim or nano)
+
+commit 7d3fb5f6a2e6ff11351b43bd4e5c04d5778e971f (master)
+Author: Scott Helm <helm.scott@gmail.com>
+Date:   Tue Jan 14 22:18:48 2020 -0500
+
+    initializes markdown support and adds agenda.
+
+    I added the plugins for markdown support and I also added the first two
+    slides
+
+commit def81eb2d62c04d7d9df35e662d9f7b28da32b8f
+Author: Scott Helm <helm.scott@gmail.com>
+Date:   Tue Jan 14 22:17:35 2020 -0500
+
+    adds the git image
+
+    I needed a good graphic to really grab attention at the beginning of the
+    presentation so I grabbed this one. I got it from linuxize.com
+
+commit 2394c3b07a679719796ec0475f73f6b695020f50
+Author: Scott Helm <helm.scott@gmail.com>
+Date:   Tue Jan 14 21:44:19 2020 -0500
+
+    initial commit
+            </code></pre>
+            to list out your changes from last to first
+          </section>
+          <section>
+            The git log is the story of your code.
+            
+            Future-you will love present-you if you keep a good log
+          </section>
         </section>
 			</div>
 		</div>
