@@ -37,15 +37,62 @@
 
             * quick primer on basics<!-- .element class="fragment fade-in" -->
             * how we use it<!-- .element class="fragment fade-in" -->
-            * branching strategies<!-- .element class="fragment fade-in" -->
-            * how code is deployed<!-- .element class="fragment fade-in" -->
+                * branching strategies<!-- .element class="fragment fade-in" -->
+                    * how code is deployed<!-- .element class="fragment fade-in" -->
             * next level<!-- .element class="fragment fade-in" -->
                 * cherry picking<!-- .element class="fragment fade-in" -->
                 * hotfix<!-- .element class="fragment fade-in" -->
             * cool stuff<!-- .element class="fragment fade-in" -->
                 * reflog<!-- .element class="fragment fade-in" -->
                 * bisect<!-- .element class="fragment fade-in" -->
+                * git hooks<!-- .element class="fragment fade-in" -->
           </textarea>
+        </section>
+        <section>
+          <section>
+            <h2>Primer</h2>
+
+            Let's get started...
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+            $ git init
+            </code></pre>
+
+            gets you started - creates a directory called `.git` in your current <em>working directory</em>. That's where your the magic happens.
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+$ git status
+On branch feature/primer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+            </code></pre>
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+            $ git add .
+            $
+            </code></pre>
+            this will <em>stage</em> ALL files that are either <em>untracked</em> or <em>modified</em> There is no output from this command
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+$ git status
+On branch feature/primer
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   index.html
+
+            </code></pre>
+            This shows that my change has been <em>staged for commit</em>
+          </section>
         </section>
 			</div>
 		</div>
