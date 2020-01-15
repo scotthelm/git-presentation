@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,12 +25,34 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+          <textarea data-template>
+            ## Let's Talk About ...
+            <div style="text-align:center"><img src="images/git.jpg" alt="git" class="fragment fade-in"/></div>
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ## Agenda
+
+            * quick primer on basics<!-- .element class="fragment fade-in" -->
+            * how we use it<!-- .element class="fragment fade-in" -->
+            * branching strategies<!-- .element class="fragment fade-in" -->
+            * how code is deployed<!-- .element class="fragment fade-in" -->
+            * next level<!-- .element class="fragment fade-in" -->
+                * cherry picking<!-- .element class="fragment fade-in" -->
+                * hotfix<!-- .element class="fragment fade-in" -->
+            * cool stuff<!-- .element class="fragment fade-in" -->
+                * reflog<!-- .element class="fragment fade-in" -->
+                * bisect<!-- .element class="fragment fade-in" -->
+          </textarea>
+        </section>
 			</div>
 		</div>
 
 		<script src="js/reveal.js"></script>
+		<script src="plugin/markdown/marked.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
 
 		<script>
 			// More info about config & dependencies:
