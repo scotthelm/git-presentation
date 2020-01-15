@@ -150,6 +150,89 @@ Date:   Tue Jan 14 21:44:19 2020 -0500
             Future-you will love present-you if you keep a good log
           </section>
         </section>
+        <section>
+          <section>
+            <h2>How We Use It</h2>
+            <!-- div class="fragment fade-in">There are many paths to go by, but in the long run, there's still time to change the road you're on...</div -->
+          </section>
+          <section>
+            <h2>Branching Strategies</h2>
+            <div class="fragment fade-in">There are many paths to go by, but in the long run, there's still time to change the road you're on...</div>
+          </section>
+          <section>
+            <ol>
+              <li>Always start from master</li>
+              <li>Create a feature branch</li>
+              <li>Do Work</li>
+              <li>Commit it</li>
+              <li>Open A PR</li>
+              <li>Once Approved, Squash and Merge</li>
+            </ol>
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+$ git checkout master
+Switched to branch 'master'
+            </code></pre>
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+$ git pull
+Already up to date.
+            </code></pre>
+            We will talk about remotes, but for the most part it will be a github repository, and it will be called <em>origin</em>
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+$ git checkout -b feature/how-we-use-it
+Switched to a new branch 'feature/add-how-we-use-it'
+            </code></pre>
+            This creates and switches us to our feature branch
+          </section>
+          <section>
+            <div style="text-align:center"><img src="images/one_eternity_later.jpg" alt="one eternity later"/></div>
+            <div class="fragment fade-in">...our work is done, and we commit it..</div>
+          </section>
+          <section>
+            <pre><code data-trim data-noescape>
+$ git checkout master
+Switched to branch 'master'
+            </code></pre>
+          </section>
+          <section>
+            <h2>PR</h2>
+            <div style="text-align:center"><img src="images/pr.png" alt="one eternity later" width="400"/></div>
+          </section>
+          <section>
+            <h2>Squash And Merge</h2>
+          </section>
+          <section>
+            Another way to do that is...
+            <pre><code data-trim data-noescape>
+$ git merge --ff-only feature/primer
+Updating 7d3fb5f..abab87a
+Fast-forward
+ images/git_commit_message.png | Bin 0 -> 149282 bytes
+ index.html                    | 107 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 2 files changed, 105 insertions(+), 2 deletions(-)
+ create mode 100644 images/git_commit_message.png
+            </code></pre>
+          </section>
+          <section>
+            --ff-only ... what the ff-only?
+            <div class="fragment fade-in">ff stands for fast-forward</div>
+            <div class="fragment fade-in">it means only merge the commits if they come directly after our <em>HEAD</em> commit</div>
+          </section>
+          <section>
+            Why should I care?
+          </section>
+          <section>
+            Remember the story of the code - when I view the log, I want to see a nice straightforward list of commits with good messages
+          </section>
+          <section>
+            If I have merge-commits, the noise to signal ratio goes up, and it's hard to follow along.
+          </section>
+        </section>
 			</div>
 		</div>
 
